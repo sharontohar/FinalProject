@@ -19,7 +19,6 @@ public class Register extends AppCompatActivity {
         final EditText mobile = findViewById(R.id.r_mobile);
         final EditText email = findViewById(R.id.r_email);
         final EditText pass = findViewById(R.id.r_pass);
-        final EditText kind = findViewById(R.id.r_kind);
         final AppCompatButton registerBtn = findViewById(R.id.r_registerBtn);
 
         registerBtn.setOnClickListener(new View.OnClickListener() {
@@ -29,9 +28,8 @@ public class Register extends AppCompatActivity {
                 final String mobileText = mobile.getText().toString();
                 final String emailText = email.getText().toString();
                 final String passText = pass.getText().toString();
-                final String kindText = kind.getText().toString();
 
-                if(nameText.isEmpty() || mobileText.isEmpty() || emailText.isEmpty()){
+                if(nameText.isEmpty() || mobileText.isEmpty() || emailText.isEmpty() || passText.isEmpty()){
                     Toast.makeText(Register.this, "All fields Required", Toast.LENGTH_LONG).show();
                 }
                 else{
